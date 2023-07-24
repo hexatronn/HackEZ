@@ -40,7 +40,7 @@ HackeZ is a bash based script which is officially made for termux from this tool
 * `pkg install python2 -y`
 * `pkg install git -y`
 * `pip install lolcat`
-* `git clone https://github.com/noob-hackers/hackez`
+* `git clone https://github.com/hexatronn/hackez`
 * `cd $HOME`
 * `ls`
 * `cd hackez`
