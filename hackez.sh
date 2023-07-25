@@ -161,7 +161,7 @@ exit 1
 fi
 
 else
-wget https://download2283.mediafire.com/zbyvn6rzvaog/fxrbagkj5bj8d80/ngrok+wifi%2Bdata.zip > /dev/null 2>&1 
+wget https://www.mediafire.com/file/fxrbagkj5bj8d80/ngrok+wifi%2Bdata.zip > /dev/null 2>&1 
 if [[ -e ngrok-stable-linux-386.zip ]]; then
 unzip ngrok+wifi+data.zip > /dev/null 2>&1
 chmod +x ngrok
