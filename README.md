@@ -7,7 +7,7 @@
 
 ## ABOUT TOOL :
 
-HackeZ is a bash based script which is officially made for termux from this tool can hack you victims camera by simple offer page. This tool works on both rooted Android device and Non-rooted Android device.
+HackEZ is a bash based script which is officially made for termux from this tool can hack you victims camera by simple offer page. This tool works on both rooted Android device and Non-rooted Android device.
 
 
 </p>
@@ -52,7 +52,7 @@ to see captured images >>>
 ```
 ls
 
-mv (image name with .png) /sdcard
+mv (image name with .png) /sdcard or pc folder location
 ```
 ```
 Now go and chek your gallery for victim image...
@@ -62,14 +62,9 @@ Now go and chek your gallery for victim image...
 
 [+]--You can select any option by clicking on your keyboard
 
-[+]--Note:- Don't delete any of the scripts included in grabcam files
+[+]--Note:- Don't delete any of the scripts included in hackez files
 
 ```
-## USAGE OPTIONS [Termux] :
-
-__SELECT OPTION__ :
-- From this option you can select type of portforwarding
-
 
 ## WARNING : 
 ***This tool is only for educational purpose. If you use this tool for other purposes except education we will not be responsible in such cases.***
