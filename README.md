@@ -6,7 +6,7 @@
 
 ## ABOUT TOOL :
 
-HackEZ is a bash based script which is officially made for termux from this tool can hack you victims camera by simple offer page. This tool works on both rooted Android device and Non-rooted Android device.
+HackEZ is a bash based script which is officially made for linux and termux from this tool can hack you victims camera by simple offer page. This tool works on both rooted Android device and Non-rooted Android device.
 
 
 </p>
@@ -17,7 +17,8 @@ HackEZ is a bash based script which is officially made for termux from this tool
 
 ### TESTED ON :
 
-* Termux, Manjaro
+* Manjaro , Termux
+* NOTE: Sometimes don't working in Termux, so grant permission 'termux-setup-storage'
 
 ### REQUIREMENTS :
 * internet
@@ -31,7 +32,7 @@ HackEZ is a bash based script which is officially made for termux from this tool
 * [+] Ngrok link !
 * [+] Easy for Beginners !
 
-## INSTALLATION [Termux] :
+## INSTALLATION [Terminal] :
 
 * `apt-get update -y`
 * `apt-get upgrade -y`
@@ -62,7 +63,7 @@ Now go and chek your gallery for victim image...
 [+]--You can select any option by clicking on your keyboard
 
 [+]--Note:- Don't delete any of the scripts included in hackez files
-
+[!]--İn Termux using give a access 'termux-setup-storage'
 ```
 
 ## WARNING : 
