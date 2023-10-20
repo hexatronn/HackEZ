@@ -40,29 +40,25 @@ HackEZ is a bash based script which is officially made for linux and termux from
 * `pkg install python2 -y`
 * `pkg install git -y`
 * `pip install lolcat`
-* `git clone https://github.com/hexatronn/hackez`
-* `cd $HOME`
+* `git clone https://github.com/hexatronn/HackEZ`
 * `ls`
 * `cd hackez`
 * `ls`
 * `bash hackez.sh`
 ```
-to see captured images >>>
-```
-```
+to see captured images:
 ls
-
 mv (image name with .png) /sdcard or pc folder location
 ```
 ```
-Now go and chek your gallery for victim image...
+Now go and chek your moved location for victim image...
 ```
 ```
 [+]--Now you need internet connection to continue further process...
 
 [+]--You can select any option by clicking on your keyboard
 
-[+]--Note:- Don't delete any of the scripts included in hackez files
+[+]--Note:- Don't delete any of the scripts included in HackEZ files
 [!]--İn Termux using give a access 'termux-setup-storage'
 ```
 
