@@ -156,8 +156,8 @@ ngrok_server() {
     if [[ -e ngrok ]]; then
         echo ""
     else
-        command -v unzip > /dev/null 2>&1 || { echo >&2 "UNZIP not installed, aborting..."; exit 1; }
-        command -v wget > /dev/null 2>&1 || { echo >&2 "WGET not installed, aborting..."; exit 1; }
+        command -v unzip > /dev/null 2>&1 || { echo >&2 "UNZIP yuklenilmeyib, legv edilir..."; exit 1; }
+        command -v wget > /dev/null 2>&1 || { echo >&2 "WGET yuklenilmeyib, legv olunur..."; exit 1; }
         printf "\e[1;92m[\e[0m+\e[1;92m] Downloading Ngrok...\n"
         arch=$(uname -a | grep -o 'arm' | head -n1)
         arch2=$(uname -a | grep -o 'Android' | head -n1)
@@ -169,7 +169,7 @@ ngrok_server() {
                 chmod +x ngrok
                 rm -rf ngrok-stable-linux-arm.zip
             else
-                printf "\e[1;93m[!] Download error... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
+                printf "\e[1;93m[!] Yuklenilme xetasi... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
                 exit 1
             fi
 
@@ -180,23 +180,23 @@ ngrok_server() {
                 chmod +x ngrok
                 rm -rf ngrok-stable-linux-386.zip
             else
-                printf "\e[1;93m[!] Download error... \e[0m\n"
+                printf "\e[1;93m[!]Yuklenilme xetasi... \e[0m\n"
                 exit 1
             fi
         fi
     fi
 
 
-printf "\e[1;92m[\e[0m+\e[1;92m] Starting PHP server...\n"
+printf "\e[1;92m[\e[0m+\e[1;92m] PHP server basladilir...\n"
     php -S 127.0.0.1:3333 > /dev/null 2>&1 &
     sleep 2
-    printf "\e[1;92m[\e[0m+\e[1;92m] Starting Ngrok server...\n"
+    printf "\e[1;92m[\e[0m+\e[1;92m] Ngrok server basladilir...\n"
     ./ngrok http 3333 > /dev/null 2>&1 &
     sleep 15  # Increased wait time to ensure Ngrok is fully running
 
     link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
     if [ -z "$link" ]; then
-        printf "\e[1;93m[!] Ngrok link not generated. Check your setup or internet connection.\e[0m\n"
+        printf "\e[1;93m[!] Ngrok link genrasiya olunmadi, sebekenizi bir daha yoxlayin...\e[0m\n"
         exit 1
     fi
     printf "\e[1;92m[\e[0m*\e[1;92m] Ngrok link:\e[0m\e[1;77m %s\e[0m\n" $link
@@ -220,7 +220,7 @@ option_server="${option_server:-${default_option_server}}"
 if [[ $option_server -eq 1 ]]; then
 
 
-command -v php > /dev/null 2>&1 || { echo >&2 "SSH install olunmayib, abort edilir..."; exit 1; }
+command -v php > /dev/null 2>&1 || { echo >&2 "SSH install olunmayib, legv edilir..."; exit 1; }
 start
 
 
